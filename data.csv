@@ -1,0 +1,401 @@
+﻿alim_grp_code,alim_ssgrp_code,alim_ssssgrp_code,foodId,alim_nom_fr,eau,proteines_jones,proteines,glucides,lipides,sucres
+00,0000,000000,24999,Dessert (aliment moyen),45.4,4.63,4.61,36.6,12.9,23.7
+01,0101,000000,25601,Salade de thon et légumes. appertisée,76.5,9.15,9.15,7.74,4.7,3.08
+01,0101,000000,25602,Salade composée avec viande ou poisson. appertisée,76.7,8.06,8.06,6.4,5.3,1.9
+01,0101,000000,25605,Champignons à la grecque. appertisés,85.2,2.08,2.08,3.95,3.55,2.38
+01,0101,000000,25606,Salade de pommes de terre. fait maison,76,2.68,2.68,9.9,8.2,0
+01,0101,000000,25608,Taboulé ou Salade de couscous. préemballé,60.3,4.88,4.88,23.7,6.7,4.9
+01,0101,000000,25609,Salade de pomme de terre à la piémontaise. préemballée,75.8,4.5,4.5,8.87,8.3,1.2
+01,0101,000000,25614,Salade de riz. appertisée,72.5,5.13,5.13,16.1,4.35,1
+01,0101,000000,25615,Salade de pâtes. végétarienne,72.6,5.7,5.7,13.7,8.1,2.3
+01,0101,000000,25616,Crudité. sans assaisonnement (aliment moyen),93.2,0.94,0.94,3.07,0.7,2.27
+01,0101,000000,25619,Salade de pâtes aux légumes. avec poisson ou viande. préemballée,70.5,5.19,5.19,14,9.94,2.16
+01,0101,000000,25626,Macédoine de légumes en salade. avec sauce. préemballée,78.3,2.81,2.81,7,9.3,2.3
+01,0101,000000,25628,Salade César au poulet (salade verte. fromage. croûtons. sauce). préemballée,71.8,8.13,8.13,4.88,10,1.71
+01,0101,000000,25629,Salade végétale à base de boulgour et/ou quinoa et légumes. préemballée,65.5,3.79,4.06,17.4,8.3,4.61
+01,0101,000000,26257,Carottes râpées. avec sauce. préemballées,84.7,0.98,0.98,6.01,5,5.2
+01,0101,000000,26258,Salade de betterave. avec sauce. préemballée,83.5,1.29,1.29,7.45,4.94,5.3
+01,0101,000000,26259,Salade de chou ou Coleslaw. avec sauce. préemballée,80.4,0.94,0.94,5.78,8.1,4.72
+01,0101,000000,26260,Salade de concombre à la crème/fromage blanc. préemballée,0,1.1,1.1,1.97,11.3,1.39
+01,0101,000000,26261,Salade de lentilles et saucisse fumée. préemballée,0,7,7,8.9,11.8,0.9
+01,0101,000000,26262,Salade grecque. avec sauce. préemballée,0,2,2,1.4,7.1,1.4
+01,0101,000000,26263,Salade de riz à la niçoise. avec sauce. préemballée,73.7,4.45,4.45,15.8,6.08,1.35
+01,0101,000000,26269,Taboulé ou Salade de couscous au poulet. préemballé,62.6,6.4,6.4,20.6,7.45,2.48
+01,0102,000000,25900,Soupe aux lentilles. préemballée à réchauffer,85.8,3.74,3.74,6.6,1.12,0.7
+01,0102,000000,25901,Soupe à la volaille et aux légumes. préemballée à réchauffer,0,3.09,3.09,2.6,0.8,1.2
+01,0102,000000,25903,Soupe aux légumes variés. préemballée à réchauffer,90.2,0.76,0.76,5.05,1.56,1.72
+01,0102,000000,25904,Soupe de poissons et / ou crustacés. préemballée à réchauffer,89.4,3.45,3.45,2.88,1.79,0.9
+01,0102,000000,25905,Soupe aux légumes variés. déshydratée reconstituée,90.9,0.86,0.86,4.43,1.22,1.07
+01,0102,000000,25907,Soupe aux poireaux et pommes de terre. préemballée à réchauffer,90.8,0.79,0.79,4.46,1.51,0.81
+01,0102,000000,25908,Soupe à la volaille et aux vermicelles. préemballée à réchauffer,93.8,1.3,1.3,3.86,1,0.77
+01,0102,000000,25909,Bouillon de viande et légumes type pot0au0feu. prêt à consommer,98.1,0.2,0.2,0.1,0.4,0
+01,0102,000000,25910,Soupe à l'oignon. préemballée à réchauffer,92.7,1.35,1.35,4.93,1.4,1.5
+01,0102,000000,25912,Soupe aux champignons. préemballée à réchauffer,92,0.81,0.81,4.09,3.07,0.91
+01,0102,000000,25913,Soupe à la carotte. préemballée à réchauffer,91.2,0.61,0.61,3.89,1.41,1.82
+01,0102,000000,25914,Soupe à la tomate. préemballée à réchauffer,90.3,0.74,0.74,6.27,0.99,2.95
+01,0102,000000,25915,Soupe chorba frik. à base de viande et de frik,85.1,3.75,3.75,5.4,2.5,0.9
+01,0102,000000,25916,Soupe minestrone. préemballée à réchauffer,89.4,1.2,1.2,5.6,2,1.7
+01,0102,000000,25917,Soupe au pistou. déshydratée reconstituée,89.4,1.2,1.2,5.2,0.35,1.2
+01,0102,000000,25919,Soupe de poissons et / ou crustacés. déshydratée reconstituée,90.6,0.91,0.91,5.09,0.5,1.06
+01,0102,000000,25923,Soupe asiatique. avec pâtes. déshydratée reconstituée,93.3,0.97,0.97,5.25,0.44,1.21
+01,0102,000000,25924,Soupe marocaine. déshydratée reconstituée,90,1.2,1.2,5.77,0.55,1.49
+01,0102,000000,25925,Soupe aux poireaux et pommes de terre. déshydratée reconstituée,92.8,0.63,0.63,4.84,0.41,0.91
+01,0102,000000,25928,Soupe à la volaille et aux légumes. déshydratée reconstituée,0,0.99,0.99,4.58,0.44,0.55
+01,0102,000000,25930,Bouillon de boeuf. déshydraté reconstitué,97.6,0.6,0.6,1.33,0.15,0.33
+01,0102,000000,25932,Soupe aux asperges. déshydratée reconstituée,90.8,0.6,0.6,5.14,1.31,0.99
+01,0102,000000,25933,Soupe à la tomate et aux vermicelles. préemballée à réchauffer,0,1.1,1.1,5.87,0.8,3.43
+01,0102,000000,25934,Soupe aux céréales et aux légumes. déshydratée reconstituée,90,1.4,1.4,6.8,1.4,1.2
+01,0102,000000,25935,Soupe à la tomate. déshydratée reconstituée,90.4,0.76,0.76,5.79,0.97,2.44
+01,0102,000000,25936,Soupe aux champignons. déshydratée reconstituée,91.3,0.65,0.65,4.37,1.79,0.63
+01,0102,000000,25942,Soupe à l'oignon. déshydratée reconstituée,94.1,0.58,0.58,4.37,0.4,1.3
+01,0102,000000,25945,Soupe au potiron. préemballée à réchauffer,91.8,0.67,0.67,4.13,1.56,2.37
+01,0102,000000,25947,Bouillon de volaille. déshydraté reconstitué,97.4,0.6,0.6,0.5,0.13,0.18
+01,0102,000000,25948,Bouillon de légumes. déshydraté reconstitué,98,0.34,0.34,0.65,0.16,0.19
+01,0102,000000,25949,Soupe à la tomate et aux vermicelles. déshydratée reconstituée,92.2,0.63,0.63,4.21,0.18,0.72
+01,0102,000000,25950,Soupe à la volaille et aux vermicelles. déshydratée reconstituée,94.2,0.75,0.75,3.87,0.25,0.31
+01,0102,000000,25953,Soupe au pistou. préemballée à réchauffer,0,2,2,4.1,0.5,0.24
+01,0102,000000,25954,Soupe au potiron. déshydratée reconstituée,0,0.79,0.79,5.61,1.24,2.64
+01,0102,000000,25955,Soupe asiatique. avec pâtes. préemballée à réchauffer,0,0.7,0.7,3.4,0.5,0.5
+01,0102,000000,25956,Soupe minestrone. déshydratée reconstituée,91.3,1.14,1.14,5.53,0.34,1.07
+01,0102,000000,25957,Soupe au cresson. déshydratée reconstituée,0,0.42,0.42,3.95,0.8,0.31
+01,0102,000000,25958,Soupe au cresson. préemballée à réchauffer,0,1,1,5.4,0.8,0.9
+01,0102,000000,25962,Soupe aux légumes avec fromage. préemballée à réchauffer,0,1.34,1.34,5.09,2.51,1.62
+01,0102,000000,25963,Soupe aux légumes verts. préemballée à réchauffer,90.9,1,1,3.84,1.32,0.81
+01,0102,000000,25964,Soupe aux légumes verts. déshydratée reconstituée,91.8,0.72,0.72,5.31,1.07,1.07
+01,0102,000000,25965,Soupe aux pois cassés. préemballée à réchauffer,0,2.68,2.68,6.25,1.98,1.02
+01,0102,000000,25967,Soupe froide type Gaspacho ou Gazpacho. préemballée,91.1,0.65,0.65,3.38,1.62,2.32
+01,0102,000000,25968,Soupe aux asperges. préemballée à réchauffer,0,4.6,4.6,4.7,10.4,2.9
+01,0102,000000,25969,Soupe (aliment moyen),90.7,1.27,1.27,4.5,1.37,1.6
+01,0102,000000,25972,Soupe miso. déshydratée reconstituée,94.6,1.38,1.38,2.18, 0.5,0.69
+01,0103,010301,8601,Tripes à la mode de Caen,74,20.4,20.4,0.3,3.68,0
+01,0103,010301,8602,Tripes à la mode de Caen. préemballées,77.9,18.4,18.4,0.7,3.62,0.5
+01,0103,010301,8612,Tripes à la tomate ou à la provençale,76.6,15.7,15.7,0.6,3.2,0.39
+01,0103,010301,25001,Blanquette de veau,75.1,15.4,15.4,3.1,4,0.3
+01,0103,010301,25033,Boeuf bourguignon,78.4,8.93,8.93,4.17,3.3,1.57
+01,0103,010301,25035,Sauté d'agneau au curry. préemballé,73.5,10.5,10.5,0,13.9,0
+01,0103,010301,25058,Canard en sauce (poivre vert. chasseur. etc.). préemballé,0,9.55,9.55,10.2,7.3,0
+01,0103,010301,25063,Lapin à la moutarde. préemballé,0,14.9,14.9,0.5,5,0.5
+01,0103,010301,25121,Coq au vin,0,13,13,4,7,1
+01,0103,010301,25125,Paupiette de veau,64.1,14.5,14.5,2.6,13.8,0.41
+01,0103,010301,25126,Paupiette de volaille,64.2,23.9,23.9,8.8,3.4,0
+01,0103,010301,25172,Viande en sauce (aliment moyen),77.1,11.3,11.3,3.65,4.6,1.34
+01,0103,010301,25174,Poulet au curry et au lait de coco,75.2,10.6,10.6,3.15,6.9,1.49
+01,0103,010301,25175,Meloukhia. plat à base de boeuf et corete. fait maison,67.7,10.6,10.6,1.2,14.7,1.2
+01,0103,010301,25200,Palette à la diable. préemballée,0,13.5,13.5,2.08,6.07,1.38
+01,0103,010301,25201,Langue de boeuf sauce madère. préemballée,0,9.5,9.5,4.5,13.5,2.5
+01,0103,010301,25207,Porc au caramel. préemballé,70.7,10,10,11.4,5.4,7.9
+01,0103,010301,25211,Boulettes au boeuf. à la sauce tomate. préemballées,0,9,9,5.5,6.5,0
+01,0103,010301,25213,Paupiette de veau. préemballée.  cuite au four,54.8,22,22,0.48,20.5,0.3
+01,0103,010301,25538,Carpaccio de boeuf. avec marinade,57,15.2,15.2,0.55,23,0.5
+01,0103,010301,25565,Yakitori (brochettes japonaises grillées en sauce),58.8,26,26,9.3,3.3,6.6
+01,0103,010301,25585,Brochette de boeuf. cuite,69.2,21.9,21.9,0.33,5.2,0
+01,0103,010301,25586,Brochette de volaille. cuite,68,23.1,23.1,1.39,4,0
+01,0103,010302,25009,Hachis parmentier à la viande. préemballé,73.6,5.99,5.99,9.39,8.22,1.47
+01,0103,010302,25029,Couscous au mouton,68.9,8.31,8.31,12.2,7.2,1.38
+01,0103,010302,25043,Couscous à la viande ou au poulet. préemballé. allégé,72.9,5.9,5.9,11.5,1.9,2.1
+01,0103,010302,25057,Poêlée de pommes de terre préfrites. lardons ou poulet. et autres. sans légumes verts. préemballée,65,3.2,3.2,16.2,9.6,1.7
+01,0103,010302,25127,Couscous royal (avec plusieurs viandes). préemballé,69.2,7.69,7.69,14,4.53,1.57
+01,0103,010302,25138,Couscous au poulet,66.9,7.5,7.5,15.6,3.85,2.87
+01,0103,010302,25152,Couscous à la viande. préemballé,69.2,7.59,7.59,12.5,4.73,1.97
+01,0103,010302,25195,Parmentier de canard. préemballé,69.9,6.82,6.82,8.51,9.06,1.96
+01,0103,010302,25587,Parmentier de canard. préemballé. cuit,68.5,7,7,10.5,10.2,1.7
+01,0103,010303,25002,Cassoulet. appertisé,70.6,8.06,8.06,9.41,5.77,1.06
+01,0103,010303,25003,Choucroute garnie. préemballée,82.4,5.06,5.06,2.8,8.06,0.66
+01,0103,010303,25010,Petit salé ou saucisse aux lentilles. préemballé,73.5,8.24,8.24,8.89,4.87,1.51
+01,0103,010303,25013,Pot0au0feu. préemballé,82.9,10.9,10.9,3.2,2.02,1.5
+01,0103,010303,25065,Boeuf aux carottes,78.5,13.2,13.2,3.3,3.15,0.6
+01,0103,010303,25071,Potée auvergnate (chou et porc),82.5,6,6,3.7,4.3,0.86
+01,0103,010303,25098,Cassoulet au porc. appertisé,71.1,8.3,8.3,8.6,6.3,1.8
+01,0103,010303,25099,Cassoulet au canard ou oie. appertisé,68.6,10.5,10.5,10.1,7.86,1.09
+01,0103,010303,25103,Tomate farcie,78.5,5.49,5.49,2,9.67,0.88
+01,0103,010303,25106,Chou farci. préemballé,81.2,5.3,5.3,2,6.6,2
+01,0103,010303,25111,Chili con carne. préemballé,74.2,7.13,7.13,13,3.35,2.58
+01,0103,010303,25123,Moussaka,76,5.82,5.82,5.16,10.8,3.01
+01,0103,010303,25124,Navarin d'agneau aux légumes,73.7,8.05,8.05,5,8.61,0.9
+01,0103,010303,25159,Tajine de mouton,73,12.8,12.8,4.5,6.83,2.4
+01,0103,010303,25164,Osso buco,77.4,11.2,11.2,3.5,4.08,1.1
+01,0103,010303,25190,Poulet basquaise. préemballé,0,9.3,9.3,2.5,6.4,2
+01,0103,010303,25204,Tajine de poulet. préemballé,72.7,7.54,7.54,14.4,3.7,6.8
+01,0103,010303,25205,Chop suey (porc ou poulet). préemballé,0,5,5,7.8,3,0
+01,0103,010303,25511,Légumes farcis (sauf tomate),81.1,6.4,6.4,3.6,3,2.59
+01,0103,010304,10082,Moules marinières (oignons et vin blanc),76.5,10.3,10.3,7.43,2.24,1.05
+01,0103,010304,10083,Moules farcies (matière grasse. persillade…). préemballées. crues,57.5,9.56,9.56,4.43,24.8,0.3
+01,0103,010304,25037,Gratin ou cassolette de poisson et / ou fruits de mer.  préemballé. cru,78.4,6.13,6.13,8.39,5.1,2.48
+01,0103,010304,25038,Gratin ou cassolette de poisson et / ou fruits de mer. préemballé. cuit,78.2,6.69,6.69,5.28,7.5,1.6
+01,0103,010304,25077,Saumon à l'oseille. préemballé,71.2,8.36,8.36,7.43,7.65,0.58
+01,0103,010304,25086,Poisson blanc à la bordelaise. préemballé,67.5,14.8,14.8,5.3,10.4,1.09
+01,0103,010304,25128,Poisson blanc à la provençale ou niçoise (sauce tomate). préemballé,83.6,9.31,9.31,3.1,2.3,2
+01,0103,010304,25140,Poisson blanc à la florentine (sauce aux épinards). préemballé,0,11.4,11.4,2.9,4.35,1.95
+01,0103,010304,25141,Poisson blanc à la marinière (sauce aux oignons. vin blanc. moules). préemballé,0,11.5,11.5,2.2,2.8,0
+01,0103,010304,25142,Poisson blanc à la sauce moutarde. préemballé,0,9.2,9.2,5.4,3.6,0
+01,0103,010304,25143,Poisson blanc à la parisienne (sauce aux champignons). préemballé,84.2,9.16,9.16,3,3.25,0.86
+01,0103,010304,25145,Poisson blanc à l'estragon. préemballé,0,8.8,8.8,4.2,2.8,0
+01,0103,010304,25146,Poisson blanc sauce oseille. préemballé,78.6,11.8,11.8,3.9,5.5,1.65
+01,0103,010304,25210,Saumon farci. préemballé,0,18.8,18.8,0.4,16.2,0.4
+01,0103,010304,25539,Brochette de poisson,73.8,18,18,0.86,5.71,0.85
+01,0103,010304,25540,Brochette de crevettes,75,18.5,18.5,1.5,1.5,0
+01,0103,010304,26054,Poisson en sauce. surgelé,75,13.3,13.3,3.18,7.05,1.3
+01,0103,010304,26140,Poisson cuit (aliment moyen),69.3,23.5,23.5,0,5.52,0
+01,0103,010304,26249,Poisson blanc. cuit (aliment moyen),74,22,22,0,2.18,0
+01,0103,010304,26250,Poisson blanc. de mer. cuit (aliment moyen),74,22.1,22.1,0,2,0
+01,0103,010305,25031,Paëlla,66.9,7.86,7.86,17.1,4.9,1.2
+01,0103,010305,25107,Couscous au poisson,75.6,7.5,7.5,14.2,1.6,1.7
+01,0103,010305,25154,Gratin de poisson et purée ou brandade aux pommes de terre ou parmentier de poisson. préemballé,74.9,6.39,6.39,8.57,6.15,1.62
+01,0103,010305,25456,Sushi ou Maki aux produits de la mer,60.3,6.69,6.69,26.9,3.7,4.93
+01,0103,010306,8296,Terrine ou mousse de légumes,75.9,4.05,4.05,5.6,9.56,1.77
+01,0103,010306,8297,Flan de légumes,68,5.38,5.38,4.13,18.6,2.06
+01,0103,010306,20194,Haricots blancs à la sauce tomate. appertisés,78.9,4.67,4.67,10.1,0.4,1.65
+01,0103,010306,20240,Piperade basquaise. préemballée,84.5,1.1,1.1,6.5,3.8,4.9
+01,0103,010306,20262,Poêlée de légumes assaisonnés sans champignon. surgelée. crue,81.7,2.6,2.6,12.1,1.77,1.5
+01,0103,010306,20273,Poêlée de légumes assaisonnés à l'asiatiques ou wok de légumes. surgelée. crue,0,3.13,3.13,5.83,3.93,3.1
+01,0103,010306,20274,Poêlée de légumes assaisonnés grillée. méridionale ou méditerranéenne. surgelée. crue,86.5,1.61,1.61,4.33,1.77,2.66
+01,0103,010306,20498,"Poêlée de légumes assaisonnés aux champignons (""champêtre""). surgelée",91.4,1.89,1.89,3.59,1.21,1.81
+01,0103,010306,25018,Ratatouille cuisinée. préemballée,88,1.22,1.22,4.97,3.15,3.91
+01,0103,010306,25026,Épinards à la crème. préemballés,86.9,2.5,2.5,4.1,2.9,1.19
+01,0103,010306,25052,Gratin d'aubergine. préemballé,80.9,1.95,1.95,5.45,8.68,3.8
+01,0103,010306,25056,Gratin dauphinois,74.7,3.38,3.38,14.5,4.2,2.08
+01,0103,010306,25073,Endive au jambon,78.4,7.44,7.44,4.71,6.3,1.98
+01,0103,010306,25101,Gratin de chou0fleur. préemballé,82.1,3,3,3.3,6.5,0.88
+01,0103,010306,25162,Gratin de légumes,79.6,3.44,3.44,6.91,6.7,3.42
+01,0103,010306,25196,Riste d'aubergines (aubergines. tomates. oignons). préemballée,0,1.05,1.05,10.6,10.4,5.2
+01,0103,010306,25199,Palet ou galette de légumes. préfrit. surgelé,79.4,3.29,3.29,10.7,5.44,3.34
+01,0103,010306,25208,Palet ou galette de légumes. préfrit. surgelé. cuit,78.2,3.31,3.31,8.45,5.7,3
+01,0103,010306,25220,Choucroute. sans garniture. égouttée. cuite,85.6,1.38,1.38,0.099,6.6,0.19
+01,0103,010306,25524,Tomate à la provençale. fait maison,83.6,1.65,1.65,6.55,4.32,2.71
+01,0103,010306,25556,Beignet de légumes,64.8,3.52,3.52,23,8.52,3.03
+01,0103,010306,25571,Falafel ou Boulette de pois0chiche et/ou fève. frite,48,8.25,8.25,18.7,14.4,1.4
+01,0103,010306,25588,Gratin de légumes en sauce blanche type béchamel. cuit,79.9,3.64,3.56,6.74,6.5,3.2
+01,0103,010306,25590,Falafel ou Boulette de pois0chiche et/ou fève. préemballé,55.7,7.38,7.38,17.7,10.8,3.57
+01,0103,010307,9082,Blé dur précuit cuisiné. en sachet micro0ondable,57,4.93,5.29,29.5,4.84,2.21
+01,0103,010307,9083,Blé dur précuit. grains entiers. cuisiné. à poêler,0,11.1,12.1,67.2,1.59,2.64
+01,0103,010307,25019,Ravioli à la viande. sauce tomate. appertisé,79.1,4.22,4.22,12.5,2.83,2.23
+01,0103,010307,25081,Lasagnes ou cannelloni à la viande (bolognaise),74.3,6.29,6.29,13.5,5.72,2.84
+01,0103,010307,25085,Pâtes à la bolognaise (spaghetti. tagliatelles…),69.5,5.32,5.32,13.6,4.07,2.64
+01,0103,010307,25088,Riz cantonais,62.9,5.46,5.46,23.6,4.94,1.28
+01,0103,010307,25110,Ravioli chinois à la vapeur à la crevette. cuit,59.4,5.5,5.5,27.8,5.5,1.1
+01,0103,010307,25122,Gratin de pâtes,64.7,7.06,7.06,16.4,9.2,2.19
+01,0103,010307,25131,Lasagnes ou cannellonis aux légumes. préemballées. cuits,74,2.75,2.75,11,4.85,4.75
+01,0103,010307,25135,Pâtes à la carbonara (spaghetti. tagliatelles…),66,5.91,5.91,14.2,8.7,1.79
+01,0103,010307,25139,Lasagnes ou cannellonis au poisson. préemballées,71.2,7.28,7.28,13,7.1,2.03
+01,0103,010307,25149,Pâtes fraîches farcies (ex : raviolis. tortellinis. ravioles du Dauphiné). au fromage. cuites,51.3,10,10,26.8,8.3,4.4
+01,0103,010307,25150,Couscous de légumes. préemballé,71.1,4.32,4.32,16.4,2.25,2.54
+01,0103,010307,25155,Pâtes fraîches farcies (ex : raviolis. tortellinis). au fromage et aux légumes. préemballées. cuites,51.2,7.94,7.94,27.8,7.5,3.53
+01,0103,010307,25157,Pâtes fraîches farcies (ex : raviolis. totellinis). à la viande (ex : bolognaise). préemballées. crues,35.3,11.4,11.4,40.3,5.79,3.91
+01,0103,010307,25158,Pâtes fraîches farcies (ex : raviolis. tortellinis). à la viande (ex : bolognaise). préemballées. cuites,60.3,6.94,6.94,25.1,4.65,1
+01,0103,010307,25181,Pâtes fraîches farcies (ex : raviolis. tortellinis. ravioles du Dauphiné). au fromage. préemballées. crues,42.9,11.3,11.3,37.3,7.69,3.83
+01,0103,010307,25182,Pâtes fraîches farcies (ex : raviolis. tortellinis). au fromage et aux légumes. préemballées. crues,37.5,9.98,9.98,41.4,5.69,3.46
+01,0103,010307,25183,Nouilles sautées/poêlées aux crevettes,76.4,4.88,4.88,12.6,3.4,1.7
+01,0103,010307,25184,Riz blanc. avec poulet. préemballé. cuit,0,4.23,4.44,31.5,3.19,3.48
+01,0103,010307,25185,Riz blanc. avec légumes et viande. préemballé. cuit,0,4.61,4.85,28.3,3.57,1.91
+01,0103,010307,25187,Risotto. aux légumes. préemballé,73.6,2.74,2.88,18.4,3.8,0.85
+01,0103,010307,25188,Risotto. aux fruits de mer. préemballé,0,5.47,5.75,12.5,6.07,2.02
+01,0103,010307,25189,Risotto. aux fromages. préemballé,0,5.65,5.93,30.9,5.16,0.58
+01,0103,010307,25192,Raviolis aux légumes. sauce tomate. appertisés,78.5,2.88,2.88,13.5,2.45,2.83
+01,0103,010307,25193,Pâtes fraîches farcies (ex : raviolis. tortellinis). aux légumes. préemballées. cuites,64.6,5.19,5.19,20.9,4.9,1.9
+01,0103,010307,25198,Pâtes en sauce aux fromages (spaghetti. tagliatelles…). préemballées,0,7.17,7.17,15.9,7.4,5.85
+01,0103,010307,25203,Pâtes fraîches farcies (ex : raviolis. tortellinis). aux légumes. préemballées. crues,0,9.4,9.4,41.4,5.06,3.14
+01,0103,010307,25216,Pâtes fraîches farcies (ex : raviolis. tortellinis). cuites (aliment moyen),55.9,7.98,7.98,25.7,6.53,2.82
+01,0103,010307,25217,Feuille de vigne farcie au riz ou dolmas. égouttée. préemballée,67.6,2.5,2.63,18.6,6.5,0.8
+01,0103,010307,25218,Lasagnes ou cannellonis aux légumes. préemballés. cuits,74.5,4.38,4.38,11.8,5.9,4.3
+01,0103,010307,25219,Lasagnes ou cannellonis aux légumes et au fromage de chèvre. préemballés. cuits,65.6,7,7,14,10.2,2.3
+01,0103,010307,25635,Lasagnes ou cannellonis au fromage et aux épinards. préemballés,68.1,6.1,6.1,11.4,6.6,3.5
+01,0103,010308,4041,Aligot (purée de pomme de terre à la tomme fraîche). préemballé,65.1,8.06,8.06,9.5,13.3,0.57
+01,0103,010308,19437,Fromage de chèvre pané à dorer. préemballé,48.6,12.9,12.7,15,19.2,3.5
+01,0103,010308,25020,Soufflé au fromage,67.3,12.9,12.9,3.8,12.6,1.77
+01,0103,010308,25137,Tartiflette. préemballée,68.9,6,6,13.5,8.9,1.25
+01,0103,010308,25437,Gougère,30.3,16.2,16.2,22.7,26.6,0.56
+01,0103,010308,25509,Préparation à base de fromage(s) pour fondue savoyarde. préemballée,57.4,16.2,15.9,2.6,17.2,1.1
+01,0103,010308,25546,Fromage pané au jambon,52.6,17.4,17.4,15.3,14.6,1.5
+01,0103,010309,20914,Escalope végétale ou steak à base de soja,52.5,15.5,17,8.7,14.7,2.3
+01,0103,010309,20917,Tempeh,63.7,16.1,17.6,7.89,4.7,0.24
+01,0103,010309,25225,Nuggets de blé (sans soja). préemballé,45.7,12.6,13.5,22.4,14.9,1.33
+01,0103,010309,25226,Nuggets soja et blé (ne convient pas aux véganes ou végétaliens). préemballé,48,14.1,14.1,18.5,12.6,3.17
+01,0103,010309,25227,Nuggets soja et blé (convient aux véganes ou végétaliens). préemballé,45.8,15.5,15.5,19.7,10.9,1.75
+01,0103,010309,25228,Pané soja et blé (ne convient pas aux véganes ou végétaliens),47.7,14.4,14.4,16.8,13.9,1.28
+01,0103,010309,25229,Bâtonnet pané soja et blé (convient aux véganes ou végétaliens). préemballée,46.2,16.9,16.9,18.8,10,0
+01,0103,010309,25230,Escalope panée. soja. blé et fromage. type cordon bleu. préemballée,50.2,15.2,15.2,15.1,13.1,2.05
+01,0103,010309,25231,Raviolis au tofu. à la sauce tomate. préemballés,77.9,3.13,3.13,12.5,2.7,3.14
+01,0103,010309,25233,Galette de céréales au fromage (sans soja). préemballé,48.4,7,7,27.8,10.3,2.86
+01,0103,010309,25234,Galette de céréales aux légumes (sans soja). préemballé,52.7,5.31,5.31,28,7.6,3.66
+01,0103,010309,25589,Boulette végétale au soja et/ou blé. préemballée,54.7,17.6,17.6,7.98,10.6,3.47
+01,0103,010309,25591,Galette ou pavé aux lentilles. soja et légumes. préemballé,61.2,9.71,10.6,16.7,5.6,2.77
+01,0103,010309,25592,Galette ou pavé au blé (seitan) et légumes. préemballé,54.6,12.5,13.4,20.8,7.1,3.97
+01,0103,010309,25593,Galette ou pavé au blé et soja (convient aux véganes ou végétaliens). préemballé,55.5,16,17.5,8.15,11,1.87
+01,0103,010309,25594,Galette ou pavé au blé et soja (ne convient pas aux véganes ou végétaliens). préemballé,61.7,10.2,11.1,13.3,10.2,2.62
+01,0103,010309,25595,Galette ou pavé au soja et fromage. préemballé,60.6,16.8,16.8,6.08,12,0.75
+01,0103,010309,25596,Galette ou pavé au soja et légumes. préemballé,62.6,13.1,14.4,8.36,8.1,3.45
+01,0103,010309,25597,Galette ou pavé au soja. fromage et légumes. préemballé,62.5,15.1,15.1,7.72,9.1,2.03
+01,0103,010309,30181,Haché végétal à base de soja. préemballé,67.5,11.5,12.6,7.01,5.8,4.19
+01,0104,000000,25404,Pizza au fromage ou Pizza margherita. préemballée,49.3,8.93,9.09,29.6,7.64,2.72
+01,0104,000000,25405,Quiche lorraine. préemballée,53.2,8.96,8.96,21,16.8,2.67
+01,0104,000000,25409,Crêpe ou Galette fourrée béchamel jambon. préemballée,0,5.75,5.75,18.7,4,1.89
+01,0104,000000,25410,Crêpe ou Galette fourrée béchamel jambon fromage. préemballée,62.6,8.83,8.83,19.1,7.5,1.7
+01,0104,000000,25411,Crêpe ou Galette fourrée béchamel champignon. préemballée,66,4.83,4.83,20.7,5.02,2.7
+01,0104,000000,25417,Tarte aux légumes. préemballée,57.4,5,5,21.8,11.7,3.2
+01,0104,000000,25435,Pizza jambon fromage. préemballée,45.3,10.3,10.3,28,6.69,2.91
+01,0104,000000,25444,Tarte au fromage. préemballée,50.5,10.3,10.3,20.7,18,1.63
+01,0104,000000,25454,Tarte à la provençale. préemballée,54.3,5.5,5.5,20,14.3,2.9
+01,0104,000000,25457,Pizza à la viande. type bolognaise. préemballée,45,10.3,10.3,27.2,8.03,2.94
+01,0104,000000,25459,Burritos,62.5,8,8,14.3,8.5,1.9
+01,0104,000000,25460,Fajitas,63.7,12.7,12.7,16,4.5,2.2
+01,0104,000000,25462,Pizza au chorizo ou salami. préemballée,48.2,10.4,10.4,26.5,10.7,3.29
+01,0104,000000,25463,Pizza aux fruits de mer. préemballée,0,10.3,10.3,24.6,6.65,1.5
+01,0104,000000,25464,Pizza au saumon. préemballée,48.3,10.1,10.1,26.7,8.78,3.04
+01,0104,000000,25468,Pizza au chèvre et lardons. préemballée,49.5,10.7,10.7,26.9,9.96,3.17
+01,0104,000000,25472,Pizza aux légumes ou Pizza 4 saisons. préemballée,51.8,8.48,8.48,25.7,8,3.62
+01,0104,000000,25477,Pizza champignons fromage. préemballée,0,7.8,7.8,31.6,6.1,1.9
+01,0104,000000,25478,Pizza 4 fromages. préemballée,42.6,13.1,13.1,28.2,10.5,2.61
+01,0104,000000,25516,Pizza (aliment moyen),47.5,10.7,10.8,27.3,8.39,2.93
+01,0104,000000,25528,Pissaladière. préemballée,0,6.4,6.4,33.8,13.1,2.9
+01,0104,000000,25529,Tarte à l'oignon. préemballée,0,7,7,23.5,17.2,5.63
+01,0104,000000,25548,Pizza jambon fromage champignons ou pizza royale. reine ou regina. préemballée,54.4,9.54,9.54,25.7,6.66,3.16
+01,0104,000000,25549,Crêpe ou Galette fourrée béchamel fromage. préemballée,65.5,6.02,6.02,17.7,5.75,3.86
+01,0104,000000,25550,Flammenkueche ou Tarte flambée aux lardons. préemballée,40.3,8.81,8.81,31.8,14.8,4.15
+01,0104,000000,25552,Crêpe ou Galette fourrée béchamel jambon fromage champignon. préemballée,69.4,8.3,8.3,16.6,6.3,2.7
+01,0104,000000,25553,Tarte ou Tourte aux poireaux. préemballée,54.5,5.76,5.76,21.6,14.3,2.34
+01,0104,000000,25555,Tarte au saumon. préemballée,55.3,8.53,8.53,21,10.5,1.63
+01,0104,000000,25560,Tourte au riesling. préemballée,0,10.2,10.2,23.7,12.6,2.25
+01,0104,000000,25561,Tarte à la tomate. préemballée,58.4,5.17,5.17,19.3,12.8,4.2
+01,0104,000000,25562,Crêpe ou Galette complète (oeuf. jambon. fromage). préemballée,56.8,12.7,12.7,15.2,9.8,1.1
+01,0104,000000,25564,Tarte aux noix de Saint0Jacques. préemballée,0,8.25,8.25,24.2,14.5,2.5
+01,0104,000000,25568,Pastilla au poulet. préemballée,54.8,12.3,12.3,14.1,12.2,3.85
+01,0104,000000,25570,Pizza aux lardons. oignons et fromage. préemballée,0,11.2,11.2,27.7,10.6,3.7
+01,0104,000000,25572,Crêpe ou Galette aux noix de St Jacques. préemballée,0,7.7,7.7,15.8,8,2.8
+01,0104,000000,25573,Tarte ou quiche salée (aliment moyen),51.9,8.11,8.11,22.7,15.6,3.14
+01,0104,000000,25581,Crêpe ou Galette fourrée béchamel champignon. cuite. préemballée,63.4,5.5,5.5,18.5,7.7,3.16
+01,0104,000000,25623,Tarte au maroilles ou Flamiche au maroilles. préemballée,0,14.1,14.1,22.1,18.3,2.8
+01,0104,000000,25625,Crêpe ou Galette fourrée au poisson et / ou fruits de mer. préemballée,0,8.5,8.5,14.3,12.4,2.4
+01,0104,000000,26256,Ficelle picarde. préemballée,0,8.6,8.6,11.9,7.5,2.7
+01,0104,000000,26267,Tarte épinard chèvre. préemballée,51.7,7.08,7.08,22.2,13.6,3
+01,0104,000000,26268,Tielle sétoise. préemballée,39.4,8.15,8.15,30.9,16,5.05
+01,0104,000000,26270,Pizza au thon. préemballée,0,10.8,10.8,23.3,8.78,3.47
+01,0104,000000,26271,Pizza kebab. préemballée,0,9.4,9.4,26.6,7.01,3.04
+01,0104,000000,26272,Pizza au poulet. préemballée,48.3,9.95,9.95,27.5,6.68,2.96
+01,0104,000000,26273,Pizza type raclette ou tartiflette. préemballée,0,11.8,11.8,27.5,12.7,2.77
+01,0104,000000,26274,Pizza au speck ou jambon cru. préemballée,47,12.2,12.2,25.7,9.43,3.47
+01,0105,000000,7811,Focaccia. garnie,0,8,8,29.5,8.75,4.25
+01,0105,000000,7812,Fougasse. garnie,34.4,9.53,9.53,38.8,11.8,1.47
+01,0105,000000,25400,Croque0monsieur. fait maison,45.1,14.3,14.3,0,18.4,0
+01,0105,000000,25403,Hot0dog. préemballé,44.5,10.9,10.9,26.3,13.8,5.2
+01,0105,000000,25413,Hamburger. provenant de fast food,46.1,13.3,13.3,28.3,8.44,5.95
+01,0105,000000,25414,Cheeseburger. provenant de fast food,46.3,13.7,14,23.1,12.9,5.47
+01,0105,000000,25415,Double cheeseburger. provenant de fast food,43.8,15.5,15.5,21.5,16.7,0
+01,0105,000000,25416,Burger au poisson. provenant de fast food,46.1,12.2,12.2,26.7,11.5,3.9
+01,0105,000000,25428,Sandwich grec ou Kebab. pita. crudités,51.8,15.2,15.2,17.4,10.9,1.1
+01,0105,000000,25429,Sandwich grec ou Kebab. baguette. crudités,48.1,15,15,23.6,9.8,2.6
+01,0105,000000,25431,Sandwich baguette. thon. crudités (tomate. salade). mayonnaise,43,10.3,10.3,32,11.3,1.4
+01,0105,000000,25434,Sandwich panini. jambon cru. mozzarella. tomates,46.6,14.2,14.2,27.2,8.35,0
+01,0105,000000,25475,Sandwich baguette. jambon. oeuf dur. crudités (tomate. salade). beurre,49.1,10.1,10.1,30.9,5.98,2.55
+01,0105,000000,25476,Sandwich baguette. poulet. crudités (tomate. salade). mayonnaise,43.3,10,10,36.3,6.35,3
+01,0105,000000,25485,Sandwich baguette. jambon emmental. préemballé,41.3,13.3,13.3,26.9,13.1,2.55
+01,0105,000000,25488,Sandwich baguette. saumon fumé. beurre,37.4,11.5,11.5,40.8,5.6,2.65
+01,0105,000000,25490,Sandwich baguette. thon. maïs. crudités. préemballé,54.6,8.87,8.87,25,6.03,2.83
+01,0105,000000,25502,Burger au poulet,49,12.7,12.7,23.8,11,2.9
+01,0105,000000,25513,Pan bagnat,51.1,7.95,7.95,30.3,6.48,3.2
+01,0105,000000,25517,Sandwich baguette. jambon. beurre,39.3,9.93,9.93,33.7,11.5,2.34
+01,0105,000000,25518,Sandwich baguette. camembert. beurre,32.9,11.9,11.9,34.3,16.7,2.18
+01,0105,000000,25519,Sandwich baguette. pâté. cornichons,39.8,10.1,10.1,32.1,13.9,2.44
+01,0105,000000,25520,Sandwich baguette. saucisson. beurre,26.6,13.7,13.7,32,21.6,2.36
+01,0105,000000,25521,Sandwich baguette. jambon. emmental. beurre,37.5,12.2,12.2,32.7,10.9,2.87
+01,0105,000000,25522,Sandwich (aliment moyen),46.6,14.2,14.2,27.2,8.35,0
+01,0105,000000,25523,Toasts ou Canapés salés. garnitures diverses. préemballés,55.1,9.09,9.09,17.8,13.3,5.75
+01,0105,000000,25530,Sandwich baguette. crudités diverses. mayonnaise,52,6.54,6.54,30,7.9,2.67
+01,0105,000000,25531,Sandwich baguette. dinde. crudités (tomate. salade). mayonnaise,44.9,12.4,12.4,30.6,8.82,2.24
+01,0105,000000,25532,Sandwich baguette. oeuf. crudités (tomate. salade). mayonnaise,47.7,8.52,8.52,30.9,9.47,2.38
+01,0105,000000,25533,Sandwich baguette. porc. crudités (tomate. salade). mayonnaise,44,12,12,30.1,10.6,2.3
+01,0105,000000,25535,Sandwich baguette. merguez. ketchup moutarde,40.2,13.1,13.1,31,11.4,2.92
+01,0105,000000,25536,Sandwich baguette. salami. beurre,28,12.5,12.5,33.2,21.4,2.01
+01,0105,000000,25542,Croque0madame,50.7,13.7,13.7,16.9,15.5,1.37
+01,0105,000000,25543,Sandwich baguette (aliment moyen),41.4,11.2,11.2,31.4,11.6,2.46
+01,0105,000000,25544,Sandwich pain de mie. garnitures diverses. préemballé,45,11.7,11.7,25.1,12.4,3.42
+01,0105,000000,25547,Croque0monsieur. préemballé,44.2,11.3,11.3,26.8,12.9,2.14
+01,0105,000000,25574,Sandwich pain de mie complet. jambon. crudités. fromage optionnel. préemballé,0,10,10,23.1,11.6,2.43
+01,0105,000000,25575,Sandwich pain de mie complet. thon. crudités. mayonnaise. préemballé,0,9.82,9.82,23.1,11.3,2.49
+01,0105,000000,25576,Sandwich pain de mie complet. jambon. fromage. préemballé,0,12.9,12.9,26.1,14.6,7.75
+01,0105,000000,25577,Sandwich pain de mie complet. poulet. crudités. mayonnaise. préemballé,0,9.18,9.18,23.7,10.4,2.61
+01,0106,000000,7814,Cake salé (garniture : fromage. légumes. viande. poisson. volaille. etc.). préemballé,42.2,11.6,11.6,25.6,18.4,2.68
+01,0106,000000,25108,Samossa ou Samoussa. préemballé. cuit,55.2,9.33,9.33,16.5,13.7,2.45
+01,0106,000000,25151,Feuilleté au poisson et / ou fruits de mer,48.3,6.55,6.55,26.5,13,4.3
+01,0106,000000,25169,Spécialité chinoise type bouchée à la vapeur. préemballée. cuite,64.6,5.9,5.9,28,1.4,3.9
+01,0106,000000,25399,Feuilleté aux escargots. préemballé,0,6.69,6.69,23.1,22.1,1.09
+01,0106,000000,25401,Feuilleté ou Friand au fromage,46,8.25,8.25,28.1,17.1,3.86
+01,0106,000000,25402,Feuilleté ou Friand à la viande. préemballé,37.1,9.59,9.59,25.9,22.6,1.17
+01,0106,000000,25412,Bouchée à la reine. à la viande/volaille/quenelle,46.8,6.12,6.12,23.5,18.9,2.6
+01,0106,000000,25418,Croissant au jambon,54,7.9,7.9,19.2,14.6,2.6
+01,0106,000000,25419,Rouleau de printemps,73.9,4.57,4.57,16.6,1.82,3.6
+01,0106,000000,25420,Nem ou Pâté impérial,54.8,6.48,6.48,21.1,11.2,3.02
+01,0106,000000,25438,Brick garni (garniture : crevettes. légumes. volaille. viande. poisson. etc.). fait maison. cuit,65.1,12.2,12.2,8.48,11.5,0.72
+01,0106,000000,25503,Bouchée à la reine. au poisson et fruits de mer,63.1,6.72,6.72,13.4,13.8,2.43
+01,0106,000000,25508,Feuilleté ou Friand jambon fromage,48.6,8.46,8.46,25.7,16.7,3.65
+01,0106,000000,25551,Beignet de viande. volaille ou poisson. fait maison. cru,55.9,18.7,18.7,10,13.5,0.92
+01,0106,000000,25557,Brick à l'oeuf. fait maison. cuit,56.2,10.4,10.4,12.3,18.1,1.6
+01,0106,000000,25558,Brick au boeuf,27,10.4,10.4,33.5,17,3.2
+01,0106,000000,25559,Brick à la pomme de terre. fait maison. cuit,60.2,3.25,3.25,19.6,13.4,1.5
+01,0106,000000,25578,Feuilleté salé (aliment moyen),45,8.39,8.39,26.1,17.8,3.03
+01,0106,000000,25580,Bouchée à la reine. garnie (aliment moyen),55,6.42,6.42,18.4,16.3,2.52
+01,0106,000000,25582,Nem ou Pâté impérial. au poulet. préemballé. cuit,57.1,8.06,8.06,20.9,8.1,1.9
+01,0106,000000,25583,Nem ou Pâté impérial. au porc. préemballé. cuit,53.6,6.88,6.88,22.6,12.7,1.9
+01,0106,000000,25584,Nem ou Pâté impérial. aux crevettes et/ou au crabe. préemballé. cuit,55,7.44,7.44,23.7,9.2,2.4
+01,0106,000000,26266,Croissant au jambon fromage. préemballé,0,8.92,8.92,22,14.5,2.77
+02,0201,020101,13004,Avocat. pulpe. cru,70.3,1.56,1.56,0.83,20.6,0.4
+02,0201,020101,20004,Bette ou blette. crue,95.4,1,1,1.63, 0.5,1.2
+02,0201,020101,20009,Carotte. crue,88.1,0.63,0.63,7.59, 0.5,6
+02,0201,020101,20010,Champignon. tout type. cru,92.6,2.37,2.37,1.88,0.23,1.43
+02,0201,020101,20012,Salade ou chicorée frisée. crue,92.9,1.48,1.48,2.4,0.25,0.7
+02,0201,020101,20014,Chou rouge. cru,90.7,1.13,1.13,4.33, 0.5,3.9
+02,0201,020101,20016,Chou0fleur. cru,92.9,1.81,1.81,2.13,0.7,1.7
+02,0201,020101,20019,Concombre. pulpe et peau. cru,96,0.64,0.64,2.54,0.11,1.67
+02,0201,020101,20020,Courgette. pulpe et peau. crue,94.7,1.23,1.23,1.8,0.26,1.79
+02,0201,020101,20022,Cresson de fontaine. cru,94.6,2.09,2.09,0.9,0.15,0.2
+02,0201,020101,20023,Céleri branche. cru,93.4,0.63,0.63,2.41, 0.5,1.3
+02,0201,020101,20026,Endive. crue,94.3,1.19,1.19,2.83, 0.5,2.4
+02,0201,020101,20028,Fenouil. cru,92.9,1,1,2.63, 0.5,2.2
+02,0201,020101,20031,Laitue. crue,95.3,1.3,1.3,1.33,0.2,0.73
+02,0201,020101,20034,Oignon. cru,89.6,1.1,1.1,6.25,0.62,4.8
+02,0201,020101,20038,Pissenlit. cru,85.3,2.91,2.91,6.1,0.85,0.71
+02,0201,020101,20039,Poireau. cru,87.6,1.49,1.49,4.9,0.25,3.15
+02,0201,020101,20041,Poivron. vert. jaune ou rouge. cru,92.1,0.8,0.8,4.55,0.27,2.7
+02,0201,020101,20044,Potiron. cru,91.6,1,1,3.5,0.1,1.36
+02,0201,020101,20045,Radis rouge. cru,95.5,0.94,0.94,1.53, 0.5,1.1
+02,0201,020101,20047,Tomate. crue,94.1,0.86,0.86,2.49,0.26,2.48
+02,0201,020101,20052,Artichaut. cru,84.9,3.2,3.2,4.92,0.18,0.99
+02,0201,020101,20053,Aubergine. crue,92.9,1.12,1.12,2.39,0.14,2.39
+02,0201,020101,20054,Cardon. cru,94,0.7,0.7,1.7,0.1,1.5
+02,0201,020101,20055,Céleri0rave. cru,88.8,1.38,1.38,3.98, 0.5,1.6
+02,0201,020101,20056,Champignon de Paris ou champignon de couche. cru,93.9,2.62,2.62,3.15,0.36,2.5
+02,0201,020101,20057,Brocoli. cru,88.9,3.95,3.95,1.7,0.48,1.7
+02,0201,020101,20058,Chou de Bruxelles. cru,85,3.98,3.98,5.67,0.4,2.2
+02,0201,020101,20059,Épinard. cru,91.6,2.62,2.62,2.25,0.5,0.32
+02,0201,020101,20061,Haricot vert. cru,90.4,1.85,1.85,4.14,0.21,3.26
+02,0201,020101,20064,Navet. pelé. cru,91.9,0.76,0.76,4.7,0.1,3.8
+02,0201,020101,20065,Chou0rave. cru,91,1.79,1.79,2.35,0.1,2.35
+02,0201,020101,20069,Chou vert. cru,91.8,2.53,2.53,1.92,0.41,1.92
+02,0201,020101,20070,Haricot vert. surgelé. cru,89.4,1.97,1.97,4.35,0.17,1.96
+02,0201,020101,20072,Petits pois. crus,79.2,5.84,5.84,7,0.55,5.67
+02,0201,020101,20073,Asperge. pelée. crue,93.3,2.04,2.04,2.4,0.21,1.88
+02,0201,020101,20082,Chou0fleur. surgelé. cru,92.5,2.09,2.09,2.64,0.37,1.91
+02,0201,020101,20083,Épinard. surgelé. cru,91.6,2.87,2.87,0.89,0.49,0.6
+02,0201,020101,20084,Petits pois. surgelés. crus,80.2,5.86,5.86,8.77,0.44,3.87
+02,0201,020101,20085,Poivron vert. cru,93,0.81,0.81,3.43, 0.5,3
+02,0201,020101,20087,Poivron rouge. cru,90.2,1.06,1.06,5.98, 0.5,4.8
+02,0201,020101,20089,Radis noir. cru,91.4,0.94,0.94,5.52, 0.3,4.3
+02,0201,020101,20090,Scarole. crue,93.8,1.25,1.25,0.3,0.2,0.23
+02,0201,020101,20091,Betterave rouge. crue,86.7,1.74,1.74,9.1,0.24,6.76
+02,0201,020101,20097,Échalote. crue,82.3,1.81,1.81,12.2, 0.5,3.3
+02,0201,020101,20099,Mâche. crue,93.7,2,2,0.5, 0.5,0
+02,0201,020101,20101,Légumes. mélange surgelé. crus,85.2,2.26,2.26,5.71,2.65,2.18
+02,0201,020101,20103,Champignon. chanterelle ou girolle. crue,88.7,2.28,2.28,2.3,0.78,1.87
+02,0201,020101,20105,Champignon. morille. crue,89.6,3.16,3.16,0.1,0.54,0.044
+02,0201,020101,20106,Champignon. truffe noire. crue,75.9,5.77,5.77,0,0.51,0.7
+02,0201,020101,20108,Maïs doux. en épis. surgelé. cru,73.3,3.36,3.36,17,1.19,3.78
+02,0201,020101,20111,Oseille. crue,93,1.84,1.84,1.6,0.65,1.54
+02,0201,020101,20114,Champignon. pleurote. crue,89.2,3.06,3.06,1.5,0.36,0.71
+02,0201,020101,20116,Chou blanc. cru,90,1.38,1.38,4.63,0.6,4.2
+02,0201,020101,20119,Tomate verte. crue,93,1.2,1.2,4,0.2,4
+02,0201,020101,20123,Batavia. crue,95.6,1.25,1.25,1.78, 0.5,1.1
+02,0201,020101,20126,Haricot de Lima. cru,70.2,6.84,6.84,15.3,0.86,1.48
+02,0201,020101,20128,Courge musquée. pulpe. crue,93.3,0.55,0.55,4.6,0.1,0
+02,0201,020101,20132,Potimarron. pulpe. cru,94.6,0.63,0.63,3.1,0.1,0
+02,0201,020101,20134,Courge hokkaïdo. pulpe. crue,86.1,1.4,1.4,9.98,0.6,0
+02,0201,020101,20136,Courge melonnette. pulpe. crue,91.2,0.75,0.75,5.98,0.13,0
+02,0201,020101,20138,Courge doubeurre (butternut). pulpe. crue,86.4,1,1,5.4,0.1,2.2
