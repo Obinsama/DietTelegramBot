@@ -1,381 +1,265 @@
-"""
-Title: Structured data classification from scratch
-Author: [fchollet](https://twitter.com/fchollet)
-Date created: 2020/06/09
-Last modified: 2020/06/09
-Description: Binary classification of structured data including numerical and categorical features.
-"""
-"""
-## Introduction
-This example demonstrates how to do structured data classification, starting from a raw
-CSV file. Our data includes both numerical and categorical features. We will use Keras
-preprocessing layers to normalize the numerical features and vectorize the categorical
-ones.
-Note that this example should be run with TensorFlow 2.5 or higher.
-### The dataset
-[Our dataset](https://archive.ics.uci.edu/ml/datasets/heart+Disease) is provided by the
-Cleveland Clinic Foundation for Heart Disease.
-It's a CSV file with 303 rows. Each row contains information about a patient (a
-**sample**), and each column describes an attribute of the patient (a **feature**). We
-use the features to predict whether a patient has a heart disease (**binary
-classification**).
-Here's the description of each feature:
-Column| Description| Feature Type
-------------|--------------------|----------------------
-Age | Age in years | Numerical
-Sex | (1 = male; 0 = female) | Categorical
-CP | Chest pain type (0, 1, 2, 3, 4) | Categorical
-Trestbpd | Resting blood pressure (in mm Hg on admission) | Numerical
-Chol | Serum cholesterol in mg/dl | Numerical
-FBS | fasting blood sugar in 120 mg/dl (1 = true; 0 = false) | Categorical
-RestECG | Resting electrocardiogram results (0, 1, 2) | Categorical
-Thalach | Maximum heart rate achieved | Numerical
-Exang | Exercise induced angina (1 = yes; 0 = no) | Categorical
-Oldpeak | ST depression induced by exercise relative to rest | Numerical
-Slope | Slope of the peak exercise ST segment | Numerical
-CA | Number of major vessels (0-3) colored by fluoroscopy | Both numerical & categorical
-Thal | 3 = normal; 6 = fixed defect; 7 = reversible defect | Categorical
-Target | Diagnosis of heart disease (1 = true; 0 = false) | Target
-"""
+import os
+import telebot
+import mysql.connector
+from mysql.connector import Error
 
-"""
-## Setup
-"""
+# Load TensorFlow Decision Forests
 
-import tensorflow as tf
-import numpy as np
-import pandas as pd
-from tensorflow import keras
-from tensorflow.keras import layers
+# Load the training dataset using pandas
+import pandas
+#import mysql.connector
+from replit import db
+from telebot import types
 
-"""
-## Preparing the data
-Let's download the data and load it into a Pandas dataframe:
-"""
+my_secret = os.getenv('API_KEY')
+#my_secret ="1676961222:AAF7kZ_rf9olinM3ScqA2WqgdoqAo3APgws"
+print(my_secret)
+bot=telebot.TeleBot('1676961222:AAF7kZ_rf9olinM3ScqA2WqgdoqAo3APgws')
+#@bot.message_handler(commands=['hello'])
+#def hello(message):
+#  bot.reply_to(message,'Bonjour pour utiliser l\'assistant veuillez entrer les informations suivantes:')
+ # bot.send_message(message.chat.id,'nom(s) et prenom(s):')
 
-file_url = "http://storage.googleapis.com/download.tensorflow.org/data/heart.csv"
-file_url = "data.csv"
-dataframe = pd.read_csv(file_url)
+#bot.polling()
 
-"""
-The dataset includes 303 samples with 14 columns per sample (13 features, plus the target
-label):
-"""
+#154.72.167.172
+def insert(connection,message,ind):
+    mySql_insert_query = """INSERT INTO Users (Chat_Id, Nom, Sexe,Age, Poids,Taille) 
+                              VALUES 
+                              (%s, %s,%s,%s,%s,%s) """
+    record = (message.chat.id, ind.name, ind.sex, ind.age,ind.poids,ind.taille)
+    cursor = connection.cursor()
+    cursor.execute(mySql_insert_query,record)
+    connection.commit()
+    print(cursor.rowcount, "Record inserted successfully into Laptop table")
+    cursor.close()
+def create_table(connection):
+    mySql_Create_Table_Query = """CREATE TABLE Users ( 
+                                            Id int(11) NOT NULL,
+                                            Chat_Id int(11) NOT NULL,
+                                            Nom varchar(250) NOT NULL,
+                                            Sexe varchar(250) NOT NULL,
+                                            Age int(11) NOT NULL,
+                                            Poids int(11) NOT NULL,
+                                            Taille int(11) NOT NULL,
+                                            PRIMARY KEY (Id)) """
 
-dataframe.shape
-
-"""
-Here's a preview of a few samples:
-"""
-
-dataframe.head()
-
-"""
-The last column, "target", indicates whether the patient has a heart disease (1) or not
-(0).
-Let's split the data into a training and validation set:
-"""
-
-val_dataframe = dataframe.sample(frac=0.2, random_state=1337)
-train_dataframe = dataframe.drop(val_dataframe.index)
-
-print(
-    "Using %d samples for training and %d for validation"
-    % (len(train_dataframe), len(val_dataframe))
-)
-
-"""
-Let's generate `tf.data.Dataset` objects for each dataframe:
-"""
+    cursor = connection.cursor()
+    result = cursor.execute(mySql_Create_Table_Query)
+    # result = cursor.execute(mySql_Create_Table_Query)
+    print("Laptop Table created successfully ")
 
 
-def dataframe_to_dataset(dataframe):
-    dataframe = dataframe.copy()
-    labels = dataframe.pop("alim_ssgrp_code")
-    ds = tf.data.Dataset.from_tensor_slices((dict(dataframe), labels))
-    ds = ds.shuffle(buffer_size=len(dataframe))
-    return ds
+def connect_sql():
+    try:
+        connection = mysql.connector.connect(host='localhost',
+                                             database='tensor',
+                                             user='root',
+                                             password='')
 
 
-train_ds = dataframe_to_dataset(train_dataframe)
-val_ds = dataframe_to_dataset(val_dataframe)
+    except mysql.connector.Error as error:
+        print("Failed to create table in MySQL: {}".format(error))
 
-"""
-Each `Dataset` yields a tuple `(input, target)` where `input` is a dictionary of features
-and `target` is the value `0` or `1`:
-"""
-
-for x, y in train_ds.take(1):
-    print("Input:", x)
-    print("Target:", y)
-
-"""
-Let's batch the datasets:
-"""
-
-train_ds = train_ds.batch(32)
-val_ds = val_ds.batch(32)
-
-"""
-## Feature preprocessing with Keras layers
-The following features are categorical features encoded as integers:
-- `sex`
-- `cp`
-- `fbs`
-- `restecg`
-- `exang`
-- `ca`
-We will encode these features using **one-hot encoding**. We have two options
-here:
- - Use `CategoryEncoding()`, which requires knowing the range of input values
- and will error on input outside the range.
- - Use `IntegerLookup()` which will build a lookup table for inputs and reserve
- an output index for unkown input values.
-For this example, we want a simple solution that will handle out of range inputs
-at inference, so we will use `IntegerLookup()`.
-We also have a categorical feature encoded as a string: `thal`. We will create an
-index of all possible features and encode output using the `StringLookup()` layer.
-Finally, the following feature are continuous numerical features:
-- `age`
-- `trestbps`
-- `chol`
-- `thalach`
-- `oldpeak`
-- `slope`
-For each of these features, we will use a `Normalization()` layer to make sure the mean
-of each feature is 0 and its standard deviation is 1.
-Below, we define 3 utility functions to do the operations:
-- `encode_numerical_feature` to apply featurewise normalization to numerical features.
-- `encode_string_categorical_feature` to first turn string inputs into integer indices,
-then one-hot encode these integer indices.
-- `encode_integer_categorical_feature` to one-hot encode integer categorical features.
-"""
-
-from tensorflow.keras.layers import IntegerLookup
-from tensorflow.keras.layers import Normalization
-from tensorflow.keras.layers import StringLookup
-
-
-def encode_numerical_feature(feature, name, dataset):
-    # Create a Normalization layer for our feature
-    normalizer = Normalization()
-
-    # Prepare a Dataset that only yields our feature
-    feature_ds = dataset.map(lambda x, y: x[name])
-    feature_ds = feature_ds.map(lambda x: tf.expand_dims(x, -1))
-
-    # Learn the statistics of the data
-    normalizer.adapt(feature_ds)
-
-    # Normalize the input feature
-    encoded_feature = normalizer(feature)
-    return encoded_feature
-
-
-def encode_categorical_feature(feature, name, dataset, is_string):
-    lookup_class = StringLookup if is_string else IntegerLookup
-    # Create a lookup layer which will turn strings into integer indices
-    lookup = lookup_class(output_mode="binary")
-
-    # Prepare a Dataset that only yields our feature
-    feature_ds = dataset.map(lambda x, y: x[name])
-    feature_ds = feature_ds.map(lambda x: tf.expand_dims(x, -1))
-
-    # Learn the set of possible string values and assign them a fixed integer index
-    lookup.adapt(feature_ds)
-
-    # Turn the string input into integer indices
-    encoded_feature = lookup(feature)
-    return encoded_feature
-
-
-"""
-## Build a model
-With this done, we can create our end-to-end model:
-"""
-
-
-# Categorical features encoded as integers
-
-alim_grp_code = keras.Input(shape=(1,), name="alim_grp_code", dtype="int64")
-#alim_ssgrp_code = keras.Input(shape=(1,), name="alim_ssgrp_code", dtype="int64")
-alim_ssssgrp_code = keras.Input(shape=(1,), name="alim_ssssgrp_code", dtype="int64")
-alim_code = keras.Input(shape=(1,), name="alim_code", dtype="int64")
-# sex = keras.Input(shape=(1,), name="sex", dtype="int64")
-# cp = keras.Input(shape=(1,), name="cp", dtype="int64")
-# fbs = keras.Input(shape=(1,), name="fbs", dtype="int64")
-# restecg = keras.Input(shape=(1,), name="restecg", dtype="int64")
-# exang = keras.Input(shape=(1,), name="exang", dtype="int64")
-# ca = keras.Input(shape=(1,), name="ca", dtype="int64")
-
-# Categorical feature encoded as string
-alim_nom_fr = keras.Input(shape=(1,), name="alim_nom_fr", dtype="string")
-# thal = keras.Input(shape=(1,), name="thal", dtype="string")
+    return connection
+def close_conn(connection):
+    if connection.is_connected():
+        cursor = connection.cursor()
+        cursor.close()
+        connection.close()
+        print("MySQL connection is closed")
 
 
 
-# Numerical features
-eau = keras.Input(shape=(1,), name="eau")
-proteines_jones = keras.Input(shape=(1,), name="proteines_jones")
-proteines = keras.Input(shape=(1,), name="proteines")
-glucides = keras.Input(shape=(1,), name="glucides")
-lipides = keras.Input(shape=(1,), name="lipides")
-sucres = keras.Input(shape=(1,), name="sucres")
-# age = keras.Input(shape=(1,), name="age")
-# trestbps = keras.Input(shape=(1,), name="trestbps")
-# chol = keras.Input(shape=(1,), name="chol")
-# thalach = keras.Input(shape=(1,), name="thalach")
-# oldpeak = keras.Input(shape=(1,), name="oldpeak")
-# slope = keras.Input(shape=(1,), name="slope")
 
-all_inputs = [
-    alim_grp_code,
-    #alim_ssgrp_code,
-    alim_ssssgrp_code,
-    alim_code,
-    alim_nom_fr,
-    eau,
-    proteines_jones,
-    proteines,
-    glucides,
-    lipides,
-    sucres,
-    # sex,
-    # cp,
-    # fbs,
-    # restecg,
-    # exang,
-    # ca,
-    # thal,
-    # age,
-    # trestbps,
-    # chol,
-    # thalach,
-    # oldpeak,
-    # slope,
-]
+user_dict = {}
 
-# Integer categorical features
-alim_grp_code_encoded = encode_categorical_feature(alim_grp_code, "alim_grp_code", train_ds, False)
-#alim_ssgrp_code_encoded = encode_categorical_feature(alim_ssgrp_code, "alim_ssgrp_code", train_ds, False)
-alim_ssssgrp_code_encoded = encode_categorical_feature(alim_ssssgrp_code, "alim_ssssgrp_code", train_ds, False)
-alim_code_encoded = encode_categorical_feature(alim_code, "alim_code", train_ds, False)
-# sex_encoded = encode_categorical_feature(sex, "sex", train_ds, False)
-# cp_encoded = encode_categorical_feature(cp, "cp", train_ds, False)
-# fbs_encoded = encode_categorical_feature(fbs, "fbs", train_ds, False)
-# restecg_encoded = encode_categorical_feature(restecg, "restecg", train_ds, False)
-# exang_encoded = encode_categorical_feature(exang, "exang", train_ds, False)
-# ca_encoded = encode_categorical_feature(ca, "ca", train_ds, False)
 
-# String categorical features
-alim_nom_fr_encoded = encode_categorical_feature(alim_nom_fr, "alim_nom_fr", train_ds, True)
-# thal_encoded = encode_categorical_feature(thal, "thal", train_ds, True)
+class User:
+    def __init__(self, name):
+        self.name = name
+        self.age = None
+        self.sex = None
+        self.taille = None
+        self.poids = None
 
-# Numerical features
-eau_encoded = encode_numerical_feature(eau, "eau", train_ds)
-proteines_jones_encoded = encode_numerical_feature(proteines_jones, "proteines_jones", train_ds)
-proteines_encoded = encode_numerical_feature(proteines, "proteines", train_ds)
-glucides_encoded = encode_numerical_feature(glucides, "glucides", train_ds)
-lipides_encoded = encode_numerical_feature(lipides, "lipides", train_ds)
-sucres_encoded = encode_numerical_feature(sucres, "sucres", train_ds)
-# age_encoded = encode_numerical_feature(age, "age", train_ds)
-# trestbps_encoded = encode_numerical_feature(trestbps, "trestbps", train_ds)
-# chol_encoded = encode_numerical_feature(chol, "chol", train_ds)
-# thalach_encoded = encode_numerical_feature(thalach, "thalach", train_ds)
-# oldpeak_encoded = encode_numerical_feature(oldpeak, "oldpeak", train_ds)
-# slope_encoded = encode_numerical_feature(slope, "slope", train_ds)
 
-all_features = layers.concatenate(
-    [
-        alim_grp_code_encoded,
-        #alim_ssgrp_code_encoded,
-        alim_ssssgrp_code_encoded,
-        alim_code_encoded,
-        alim_nom_fr_encoded,
-        eau_encoded,
-        proteines_jones_encoded,
-        proteines_encoded,
-        glucides_encoded,
-        lipides_encoded,
-        sucres_encoded,
-        # sex_encoded,
-        # cp_encoded,
-        # fbs_encoded,
-        # restecg_encoded,
-        # exang_encoded,
-        # slope_encoded,
-        # ca_encoded,
-        # thal_encoded,
-        # age_encoded,
-        # trestbps_encoded,
-        # chol_encoded,
-        # thalach_encoded,
-        # oldpeak_encoded,
-    ]
-)
-x = layers.Dense(32, activation="relu")(all_features)
-x = layers.Dropout(0.5)(x)
-output = layers.Dense(1, activation="sigmoid")(x)
-model = keras.Model(all_inputs, output)
-model.compile("adam", "binary_crossentropy", metrics=["accuracy"])
+# Handle '/start' and '/help'
+@bot.message_handler(commands=['help', 'start'])
+def send_welcome(message):
+    msg = bot.reply_to(message, """\
+Bonjour, pour utiliser l'assistant, veuillez entrer vos parametres.
+Quel est votre nom complet?
+""")
+    bot.register_next_step_handler(msg, process_name_step)
 
-"""
-Let's visualize our connectivity graph:
-"""
 
-# `rankdir='LR'` is to make the graph horizontal.
-keras.utils.plot_model(model, show_shapes=True, rankdir="LR")
+def process_name_step(message):
+    try:
+        chat_id = message.chat.id
+        name = message.text
+        user = User(name)
+        user_dict[chat_id] = user
+        msg = bot.reply_to(message, 'Quel est votre age?')
+        bot.register_next_step_handler(msg, process_age_step)
+    except Exception as e:
+        bot.reply_to(message, 'oooops')
 
-"""
-## Train the model
-"""
 
-model.fit(train_ds, epochs=500, validation_data=val_ds)
+def process_age_step(message):
+    try:
+        chat_id = message.chat.id
+        age = message.text
+        if not age.isdigit():
+            msg = bot.reply_to(message, 'Vous devez saisir un nombre quel est votre age?')
+            bot.register_next_step_handler(msg, process_age_step)
+            return
+        user = user_dict[chat_id]
+        user.age = age
+        msg = bot.reply_to(message, 'Quelle est votre taille en cm?')
+        bot.register_next_step_handler(msg, process_taille_step)
+    except Exception as e:
+        bot.reply_to(message, 'oooops')
 
-"""
-We quickly get to 80% validation accuracy.
-"""
+def process_taille_step(message):
+  try:
+    chat_id=message.chat.id
+    taille=message.text
+    if not taille.isdigit():
+       msg = bot.reply_to(message, 'Vous devez saisir un nombre quel est votre taille en cm?')
+       bot.register_next_step_handler(msg, process_taille_step)
+       return
+    user=user_dict[chat_id]
+    user.taille=taille
+    msg = bot.reply_to(message, 'Quel est votre poids en Kg?')
+    bot.register_next_step_handler(msg, process_poids_step)
+  except Exception as e:
+        bot.reply_to(message, 'oooops')
 
-"""
-## Inference on new data
-To get a prediction for a new sample, you can simply call `model.predict()`. There are
-just two things you need to do:
-1. wrap scalars into a list so as to have a batch dimension (models only process batches
-of data, not single samples)
-2. Call `convert_to_tensor` on each feature
-"""
+def process_poids_step(message):
+  try:
+    chat_id=message.chat.id
+    poids=message.text
+    if not poids.isdigit():
+       msg = bot.reply_to(message, 'Vous devez saisir un nombre quel est votre poids en Kg?')
+       bot.register_next_step_handler(msg, process_poids_step)
+       return
+    user=user_dict[chat_id]
+    user.poids=poids
+    markup = types.ReplyKeyboardMarkup(one_time_keyboard=True)
+    markup.add('Homme', 'Femme')
+    msg = bot.reply_to(message, 'Quel est votre genre?', reply_markup=markup)
+    bot.register_next_step_handler(msg, process_sex_step)
+  except Exception as e:
+        bot.reply_to(message, 'oooops')
 
-sample = {
-    "alim_grp_code":1,
-    #"alim_ssgrp_code":1,
-    "alim_ssssgrp_code":1,
-    "alim_code":1,
-    "alim_nom_fr":1,
-    "eau":85.2,
-    "proteines_jones":2.08,
-    "proteines":2.08,
-    "glucides":3.95,
-    "lipides":3.55,
-    "sucres":2.38
-    # "age": 60,
-    # "sex": 1,
-    # "cp": 1,
-    # "trestbps": 145,
-    # "chol": 233,
-    # "fbs": 1,
-    # "restecg": 2,
-    # "thalach": 150,
-    # "exang": 0,
-    # "oldpeak": 2.3,
-    # "slope": 3,
-    # "ca": 0,
-    # "thal": "fixed",
-}
+def process_sex_step(message):
+    try:
+        chat_id = message.chat.id
+        sex = message.text
+        user = user_dict[chat_id]
+        if (sex == u'Homme') or (sex == u'Femme'):
+            user.sex = sex
+        else:
+            raise Exception("sexe inconnu")
+        bot.send_message(chat_id, 'Merci d\'avoir suivi la procedure votre profil est le suivant: \n' 'Nom : ' + user.name + '\n Age : ' + str(user.age)+' ans' +'\n Taille : ' + user.taille+' cm' +'\n Poids : ' + user.poids+' Kg' +'\n Sexe : ' + user.sex)
+        #db['username']=user.name
+        # db['age']=user.age
+        # db['taille']=user.taille
+        # db['poids']=user.name
+        # db['sexe']=user.sex
+        # print(type(message.chat.id))
+        # print(type(user.age))
+        # print(type(user.sex))
+        # print(type(user.name))
+        # print(type(user.poids))
+        # print(type(user.taille))
+        con=connect_sql()
+        insert(con,message,user)
+        close_conn(con)
+        #bot.send_message(user)
+    except Exception as e:
+        bot.reply_to(message, 'oooopse'+e)
 
-input_dict = {name: tf.convert_to_tensor([value]) for name, value in sample.items()}
-predictions = model.predict(input_dict)
 
-print(
-    "This particular patient had a %.1f percent probability "
-    "of having a heart disease, as evaluated by our model." % (100 * predictions[0][0],)
-)
+
+# Enable saving next step handlers to file "./.handlers-saves/step.save".
+# Delay=2 means that after any change in next step handlers (e.g. calling register_next_step_handler())
+# saving will hapen after delay 2 seconds.
+bot.enable_save_next_step_handlers(delay=2)
+@bot.message_handler(commands=['infos'])
+def infos(message):
+    chat_id=message.chat.id
+    #user = user_dict[chat_id]
+    connection = connect_sql()
+    cursor = connection.cursor()
+    sql_select_Query = """select * from Users where Chat_Id = %s"""
+    #record=message.chat.id
+    cursor.execute(sql_select_Query,(message.chat.id,))
+    # get all records
+    records = cursor.fetchall()
+    print("Total number of rows in table: ", cursor.rowcount)
+    print("\nSending it to telegram")
+    for row in records:
+        user={
+            "name":row[2],
+            "age":row[4],
+            "sex":row[3],
+            "poids":row[5],
+            "taille":row[6]
+        }
+
+        # print("Id = ", row[0], )
+        # print("Chat_id = ", row[1])
+        # print("name  = ", row[2])
+        # print("age  = ", row[3])
+        # print("sex  = ", row[4])
+        # print("poids  = ", row[5])
+        # print("taille  = ", row[6])
+        # print("Purchase date  = ", row[3], "\n")
+    bot.send_message(message.chat.id,'Votre profil est le suivant: \n' +'Nom : ' + user["name"] + '\n Age : ' + str(user["age"]) + ' ans' + '\n Taille : ' + str(user["taille"]) + ' cm\n' + ' Poids : ' + str(user["poids"]) + ' Kg' + '\n Sexe : ' + user["sex"])
+
+    @bot.message_handler(commands=['/food'])
+    def food(message):
+        chat_id = message.chat.id
+        # user = user_dict[chat_id]
+        connection = connect_sql()
+        cursor = connection.cursor()
+        sql_select_Query = """select * from Users where Chat_Id = %s"""
+        # record=message.chat.id
+        cursor.execute(sql_select_Query, (message.chat.id,))
+        # get all records
+        records = cursor.fetchall()
+        print("Total number of rows in table: ", cursor.rowcount)
+        print("\nSending it to telegram")
+        for row in records:
+            user = {
+                "name": row[2],
+                "age": row[4],
+                "sex": row[3],
+                "poids": row[5],
+                "taille": row[6]
+            }
+        if user['age']>30 & user['age']<50 & user['poids']>60 & user['poids']<100:
+            userId_=1
+        elif user['age']>10 & user['age']<20 & user['poids']>60 & user['poids']<100:
+            userId_=5
+        elif user['age']>50 & user['age']<60 & user['poids']>60 & user['poids']<100:
+            userId_=3
+        elif user['age']>20 & user['age']<30 & user['poids']>60 & user['poids']<100:
+            userId_=9
+        elif user['age']>60 & user['age']<70 & user['poids']>60 & user['poids']<100:
+            userId_=11
+        elif user['age']>70 & user['age']<100 & user['poids']>60 & user['poids']<100:
+            userId_=15
+        else:
+            userId_=10
+
+
+
+        bot.send_message(message.chat.id,'Votre profil est le suivant: \n' + 'Nom : ' + user["name"] + '\n Age : ' + str(user["age"]) + ' ans' + '\n Taille : ' + str(user["taille"]) + ' cm\n' + ' Poids : ' + str(user["poids"]) + ' Kg' + '\n Sexe : ' + user["sex"])
+# Load next_step_handlers from save file (default "./.handlers-saves/step.save")
+# WARNING It will work only if enable_save_next_step_handlers was called!
+bot.load_next_step_handlers()
+
+bot.polling()
