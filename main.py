@@ -459,7 +459,7 @@ def food(message):
     recommended_foods = food_df[food_df["foodId"].isin(recommended_food_ids)]
     eat=""
     for row in recommended_foods.itertuples():
-        print(row.alim_nom_fr, ": Qte sucre", row.sucres)
+        print(row.alim_nom_fr, ": qte glucides", row.glucides,"qte sucre",row.sucres,'qte eau',row.eau)
         eat+="\n"+"----------------------------------------------------------------------------------------"+"\n"+row.alim_nom_fr+ " : Qte sucre "+str(row.sucres)
     bot.send_message(message.chat.id,eat)
 
